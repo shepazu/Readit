@@ -1,0 +1,40 @@
+{
+  "name": "Readit",
+  "version": "1.0.0",
+  "description": "A test Electron app",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "mac": "electron-builder -m",
+    "win": "electron-builder -w",
+    "build": "electron-builder -mwl"
+  },
+  "build": {
+    "appId": "studio.fizz.readit",
+    "directories": {
+        "buildResources": "."
+    },
+    "mac": {
+      "category": "public.app-category.productivity"
+    },
+    "win": {
+      "certificateFile": "private/ElectronApps.p12",
+      "verifyUpdateCodeSignature": false
+    },
+    "linux": {
+      "category": "Network"
+    }
+  },
+  "author": "Doug Schepers",
+  "license": "CC0-1.0",
+  "devDependencies": {
+    "electron": "~1.7.8",
+    "electron-builder": "^19.49.2"
+  },
+  "dependencies": {
+    "bulma": "0.3.1",
+    "font-awesome": "^4.7.0",
+    "jquery": "^3.2.1",
+    "query-string": "^5.0.1"
+  }
+}
